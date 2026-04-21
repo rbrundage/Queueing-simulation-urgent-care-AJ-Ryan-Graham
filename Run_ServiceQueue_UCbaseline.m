@@ -1,4 +1,4 @@
-%[text] # Run samples of the ServiceQueue simulation
+%[text] # Run samples of the ServiceQueue simulation AJ Graham Ryan
 %[text] Collect statistics and plot histograms along the way.
 PictureFolder = "Pictures";
 mkdir(PictureFolder);
@@ -271,7 +271,8 @@ fprintf("W simulation = %.4f hours = %.2f minutes, theory = %.4f hours = %.2f mi
     W_sim, 60*W_sim, W, 60*W);
 fprintf("Wq simulation = %.4f hours = %.2f minutes, theory = %.4f hours = %.2f minutes\n", ...
     Wq_sim, 60*Wq_sim, Wq, 60*Wq);
-
+%[text] ### Comparison:
+%[text] Compared to the baseline M/M/1 model, the reneging model gives smaller probabilities for larger values of nnn because customers may leave before being served. This reduces congestion and makes smaller system sizes more likely.
 
 %[appendix]{"version":"1.0"}
 %---

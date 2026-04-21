@@ -357,7 +357,7 @@ classdef ServiceQueueRenege < handle
             NumReneged = length(obj.Reneged);
 
             % MATLAB-ism: This is how to add a row to the end of a table.
-            obj.Log(end+1, :) = {obj.Time, NumWaiting, NumInService, NumServed};
+            obj.Log(end+1, :) = {obj.Time, NumWaiting, NumInService, NumServed,NumReneged};
         end
     end
 end
