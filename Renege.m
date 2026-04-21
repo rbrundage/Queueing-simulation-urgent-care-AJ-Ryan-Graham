@@ -3,24 +3,22 @@ classdef Renege < Event
     % the queue before being served.
 
     properties
-        % Keep same structure as Departure (even if not all used)
-        ServerIndex;
+        % Customer tied to this reneging event
+        Customer;
     end
 
     methods
-        function obj = Renege(Time, ServerIndex)
+        function obj = Renege(Time, Customer)
             arguments
                 Time = 0.0;
-                ServerIndex = 0;
+                Customer = [];
             end
             
             obj = obj@Event(Time);
-
-            obj.ServerIndex = ServerIndex;
+            obj.Customer = Customer;
         end
 
         function varargout = visit(obj, other)
-            % ONLY change required:
             [varargout{1:nargout}] = handle_renege(other, obj);
         end
     end
