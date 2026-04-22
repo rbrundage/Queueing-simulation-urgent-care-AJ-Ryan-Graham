@@ -309,7 +309,7 @@ fprintf("Wq simulation = %.4f hours = %.2f minutes, theory = %.4f hours = %.2f m
     Wq_sim, 60*Wq_sim, Wq, 60*Wq); %[output:group:9eab79fd] %[output:1554da12]
 fprintf("pi_s simulation = %.4f, theory = %.4f\n", avgFracServed, pi_s); %[output:4357f197]
 %[text] #### Question 3)
-%[text] The simulated histogram of PnP\_nPn​ agrees well with the theoretical probabilities, particularly for smaller values of nnn. Minor differences are expected due to randomness.
+%[text] The simulated histogram of Pn agrees well with the theoretical probabilities, particularly for smaller values of n. Minor differences are expected due to randomness.
 %[text] #### Q6)
 %[text] The simulation results for L,Lq,W and Wq​ are close to the theoretical values computed from Pn. For example, Lsim=0.5767 compared to L=0.6182, and Wsim=0.3505 hours compared to W=0.309 hours. The value of pi\_s​ is also close, with 0.768 from simulation and 0.7092 from theory.
 %[text] Q7)
