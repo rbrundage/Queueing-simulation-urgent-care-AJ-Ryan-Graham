@@ -131,7 +131,7 @@ classdef ServiceQueueRenege < handle
                 makedist("Exponential", mu=1/obj.DepartureRate);
             %initialize renege dist
             obj.RenegeDist = ...
-                makedist("Exponential", mu=1/obj.RenegeRate);
+    makedist("Gamma", a=2, b=1/(2 * obj.RenegeRate));
             obj.ServerAvailable = repelem(true, obj.NumServers);
             obj.Servers = cell([1, obj.NumServers]);
             % Events has to be initialized in the constructor.
